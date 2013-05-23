@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1	Bienvenido
+	h2	Por favor Identifiquese
+	if message
+		h4
+			each msg in message
+				h5 #{msg}
+	form(id="login", method="POST", action="/login")
+		input(type="text", name="username", placeholder="Usuario")
+		input(type="password", name="password", placeholder="Contraseña")
+		button(type="submit") Ingresar

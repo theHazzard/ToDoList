@@ -1,0 +1,10 @@
+extends layout
+
+block content
+	if user
+		h1 Bienvenido #{user.usuario}!
+	else
+		h1 Bienvenido! lo invitammos a formar parte de esta comunidad.
+		a(href="/signup", target="_self") Registrarme
+		p o
+		a(href="/login", target="_self") Ingresar

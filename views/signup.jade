@@ -1,0 +1,9 @@
+extends layout
+
+block content
+	h1 Bienvenido
+	h2 nos alegra qua haya decidido formar parte de nuestra familia
+	form(id="signup", method="POST", action="/signup")
+		input(type="text", placeholder="Usuario", name="user")
+		input(type="password", placeholder="Contraseña", name="password")
+		button(type="submit") Registrarme!
