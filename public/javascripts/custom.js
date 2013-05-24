@@ -18,7 +18,11 @@
 	});
 
 	App.Collections.ToDos = Backbone.Collection.extend({
-		model: App.Models.Todo,
+		model: App.Models.ToDo,
 		url: "/api/todos"
 	});
+
+	App.Collections.todos = new App.Collections.ToDos;
+	console.log(App.Collections.todos);
+	App.Collections.todos.fetch();
 })()
