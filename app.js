@@ -150,7 +150,7 @@ app.delete('/api/todos/:id', function (req, res){
 });
 
 app.put('/api/todos/:id', function (req,res){
-  Todo.findByIdAndUpdate(req.params.id, { $set: { mensaje: req.body.titulo, finalizado: req.body.estado  }}, function (err,todo){
+  Todo.findByIdAndUpdate(req.params.id, { $set: { mensaje: req.body.mensaje, finalizado: req.body.finalizado  }}, function (err,todo){
     if (err) { return res.send(500)};
     res.json(todo);
   });
